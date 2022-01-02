@@ -86,13 +86,63 @@ public static void main(String[] args)
     //Path back to Humanity
     else if(!penguinPath) {
       System.out.println("Starting your journey back to having opposable thumbs, you see a group of chattering penguins and the cool, deep waters of the ocean");
+      
+      //2 Decider
       while (userResult == 3) {
         userResult = poseQuestion("Walk to the group of penguins (1) or search for a solution in the ocean (2)?", "1", "2");
       }
+
+      //2-1
       if (userResult == 1) {
+        userResult = 3;
         System.out.println("You walk over to the group of penguins, skeptical in your squawks as you only Minored in Penglish while in college.");
         System.out.println("To your surprise, they seem to be speaking fluent English (very convenient). As you are a no nonsense once-human-penguin, you ask the most important looking penguin why you were forced to changed species.");
-        //to be continued
+        System.out.println("Jerold the Penguin tells you that the Bluish Orb of Penguins was accidentally left in the igloo you walked in to, which turned you into a penguin.");
+        
+        //2-1 Decider
+        while (userResult == 3) {
+          userResult = poseQuestion("Do you go back and search the igloo for the orb (1) or do you search for another possible way to turn back into a human (2)?", "1", "2");
+        }
+
+        //2-1-1 Ending
+        if (userResult == 1) {
+          userResult = 3;
+          System.out.println("You waddle back to your igloo and start digging through a very suspicious mound of snow with a cool looking glow.");
+          System.out.println("After an agonizing amount of flipper-shoveling, you finally recover the amazing blue orb and in a blinding flash of light....nothing happens!");
+          System.out.println("But fear not because Jerold, now aged and dying (because you took so long digging alone, maybe if you weren't so focused on becoming human again you would have made some cool and helpful penguin friends).");
+          System.out.println("He sacrifices the small amount of life force in his body to activate the orb, finally turning you back into a grateful and enlightened human.");
+        }
+        //2-1-2 Ending
+        else if (userResult == 2) {
+          userResult = 3;
+          System.out.println("You gather up a group of helpful and chivalrous penguins to help you find Jerold's Potion of Plucking.");
+          System.out.println("After 15 min of dutiful searching, a purple potion is presented to you and you tearfully wave goodbye to your new friends, forever grateful for this experience as a penguin...now a human once again.");
+        }
+      }
+
+      //2-2
+      else if (userResult == 2) {
+        userResult = 3;
+        System.out.println("Readying your feathers for a dive into the frigid waters, you give out a squawk and plunge into the ocean.");
+        System.out.println("To your surprise, you have not immediately gone into shock. You eagerly search for some sort of underwater clue back to humanity.");
+
+        //2-2 Decider
+        while (userResult == 3) {
+          userResult = poseQuestion("Do you search the nearby Underwater Temple (1) or do you investigate the Ancient Sea Lion Graveyard (2)?", "1", "2");
+        }
+
+        //2-2-1 Ending
+        if (userResult == 1) {
+          userResult = 3;
+          System.out.println("You swim rather quickly to the temple to find it decorated with penguin offerings of fish carvings and wooden flippers.");
+          System.out.println("On the altar you see a smiling (what you assume to be) statue of a penguin god. You float over to the altar and get hit by a flash of blue light.");
+          System.out.println("You wake up and see that you are once again human. You look back on your experience and realize that you were a penguin. You are now crazy.");
+        }
+        //2-2-2 Ending
+        else if (userResult == 2) {
+          System.out.print("After sneaking into the middle of the Sea Lion Graveyard (you were a ninja marine biologist as a human)");
+          System.out.println(" you feel your penguin muscles bulge and your flippers be replaced by fingersas the penguin gods have smiled upon your feat and choose to restore your humanity . Hooray!");
+        }
       }
     }
   }
