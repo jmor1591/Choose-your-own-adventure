@@ -1,11 +1,15 @@
 /*
- * need to do header
+ Project Title: Choose Your Own Adventure
+ Group: Jordan Morris, Justin Zhou
+ Period 4
+ Precondition(s): User must type in a valid response.
+ Postcondition(s): Story will be presented to the user. The user will most likely be prompted to put in another input.
  */
 import java.util.Scanner; //Import the scanner class
 
 public class ChooseYourOwnAdventure
 {
-static Scanner sc = new Scanner(System.in);
+static Scanner jc = new Scanner(System.in);
 //new scanner object
 public static String getUserInput(String a, String b) {
    Scanner sc = new Scanner(System.in);
@@ -59,7 +63,7 @@ public static void main(String[] args)
 
     while (!isValid) {
       System.out.println("Do you accept your new life as a small adorable penguin (Y) or do you try to change back into a human (N)?");
-      answer = sc.nextLine().toUpperCase();
+      answer = jc.nextLine().toUpperCase();
       //Compound boolean expression
       if (answer.equals("Y") || answer.equals("N")) {
         isValid = true;       
