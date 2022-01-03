@@ -80,7 +80,54 @@ public static void main(String[] args)
 
     //Path of the Penguin-Embracer
     if (penguinPath) {
-      System.out.println("Havent finished yet");
+      while (userResult == 3) {
+        userResult = poseQuestion("Your first big decision as an adorable itty bitty penguin is to either grab some food from the fish pile (1) or go talk with a chattering group of penguins (2)?", "1", "2");
+      }
+      //1-1
+      if (userResult == 1) {
+        userResult = 3;
+        System.out.print("Feeling a bit 'peckish', you waddle over to the massive fish pile, grab yourself a mackerel");
+        System.out.println(" and make small talk with some other hungry penguins.");
+        System.out.println("They are talking about either going for a swim or maybe going to the Snow Ampitheater.");
+        while (userResult == 3) {
+          userResult = poseQuestion("Do you decide to go for a relaxing swim (1) or go catch a show at the Ampitheater (2)?", "1", "2");
+        }
+
+        //1-1-1 Ending 
+        if (userResult == 1) {
+          userResult = 3;
+          System.out.print("You find that immediately your choice to stay as a penguin has paid off because ");
+          System.out.print("the cool water under your wings is complimented by the feeling of gliding underwat- aaaaaaaaand a sea lion");
+          System.out.println(" just ate you...");
+        }
+        //1-1-2 Ending
+        else if (userResult == 2) {
+          userResult = 3;
+          System.out.print("The water looks a little too cold for you and so you go watch Happy Feet at the Ampitheater, going on");
+          System.out.print(" to become a renowned penguin actor after the inspiring performance. Who could have guessed your");
+          System.out.println(" life would turn out this way?");
+        }
+      }
+      //1-2
+      else if (userResult == 2) {
+        userResult = 3;
+        System.out.print("You roll on over to the cool looking group of penguins, they seem to be talking about going to the ice");
+        System.out.println(" rink or possibly do some cool penguin tricks.");
+        while (userResult == 3) {
+          userResult = poseQuestion("Do you go to the ice rink (1) or do some cool penguin tricks (2)", "1", "2");
+        }
+
+        //1-2-1 Ending
+        if (userResult == 1) {
+          userResult = 3;
+          System.out.println("You impress all the penguins with your epic fails at ice skating.");
+        }
+        //1-2-2 Ending
+        else if (userResult == 2) {
+          userResult = 3;
+          System.out.println("Your cool backlip is overshadowed by Timothy the Cool Penguin breakdancing while the rest of the penguins do flipper handstands.");
+        }
+      }
     }
 
     //Path back to Humanity
