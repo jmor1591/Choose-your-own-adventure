@@ -20,8 +20,8 @@ public static String getUserInput(String a, String b) {
    //records what the user types
    String userInput = sc.nextLine();
 
-   //closes scanner
-   sc.close();
+   //closes scanner just kidding lol
+  
 
    //returns the user's input as a string
    return userInput;
@@ -60,7 +60,7 @@ public static void main(String[] args)
     System.out.println("You wake up and look down to see that your hands have turned to flippers");
     //String test = sc.nextLine();
     //System.out.println(test);
-
+    /*
     while (!isValid) {
       System.out.println("Do you accept your new life as a small adorable penguin (Y) or do you try to change back into a human (N)?");
       answer = jc.nextLine().toUpperCase();
@@ -79,11 +79,17 @@ public static void main(String[] args)
         }
       }
     }
+    */
     //more legible code starts
     int userResult = 3;
+  
+    while (userResult == 3) {
+      userResult = poseQuestion("Do you want to stay a penguin (1) or try to become human again (2)?", "1", "2");
+    }
 
     //Path of the Penguin-Embracer
-    if (penguinPath) {
+    if (userResult == 1) {
+      userResult = 3;
       while (userResult == 3) {
         userResult = poseQuestion("Your first big decision as an adorable itty bitty penguin is to either grab some food from the fish pile (1) or go talk with a chattering group of penguins (2)?", "1", "2");
       }
@@ -135,7 +141,8 @@ public static void main(String[] args)
     }
 
     //Path back to Humanity
-    else if(!penguinPath) {
+    else if (userResult == 2) {
+      userResult = 3;
       System.out.println("Starting your journey back to having opposable thumbs, you see a group of chattering penguins and the cool, deep waters of the ocean");
       
       //2 Decider
